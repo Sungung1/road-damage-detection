@@ -15,55 +15,17 @@ Road Damage Detection is a computer vision project for identifying cracks and su
 
 ## Architecture
 
-Road image -> YOLO detector -> Bounding box rendering -> Result image
-
-## Project Structure
-
-```text
-road-damage-detection/
-├── src/road_damage_detection/
-├── data/
-├── models/
-├── notebooks/
-├── templates/
-├── train.py
-├── inference.py
-├── app.py
-├── requirements.txt
-└── README.md
-```
+Input image -> YOLO model -> Defect localization -> Rendered output image
 
 ## Usage
 
-Install dependencies:
-
 ```bash
 pip install -r requirements.txt
-```
-
-Train:
-
-```bash
-python train.py --help
-```
-
-Run inference:
-
-```bash
-python inference.py --help
-```
-
-Launch the web demo:
-
-```bash
+python train.py
+python inference.py sample.jpg
 python app.py
 ```
 
 ## Results
 
 The current demo saves the latest inference image to `data/results/output.jpg`. Once a trained checkpoint is available at `models/best.pt`, uploads are rendered with predicted damage boxes.
-
-## Demo
-
-- Web upload flow via Flask
-- Original project report: `miniporject_YOLO_Road_Damage_Detect.pdf`
