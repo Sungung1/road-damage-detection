@@ -23,7 +23,6 @@ Input image -> YOLO model -> Defect localization -> Rendered output image
 pip install -r requirements.txt
 python train.py
 python inference.py sample.jpg
-python app.py
 ```
 
 ## Results
